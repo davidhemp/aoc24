@@ -3,5 +3,7 @@
 # Run Each day
 for d in $(ls days); do
     echo "Running $d"
-    ./days/$d/run.sh
+    pushd ./days/$d
+    ./run.sh
+    popd
 done
