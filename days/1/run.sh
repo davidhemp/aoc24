@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./part1.sh
+time ./part1.sh
+time ./part2.sh
