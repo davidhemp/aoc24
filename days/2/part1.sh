@@ -46,10 +46,7 @@ while read -u 3 -r report ; do
     done
     if [[ $SAFE -eq 1 ]]; then
         TOTAL=$((TOTAL + 1))
-        echo "SAFE"
-    else
-        echo "UNSAFE: $ERR $report"
     fi
-done 3< ../../data/day-2-example
+done 3< ../../data/day-2
 
  echo "Total safe reports: $TOTAL"
