@@ -1,2 +1,2 @@
 #!/bin/bash
-./part1.sh
+time ./part1.sh
