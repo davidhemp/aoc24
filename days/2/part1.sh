@@ -54,7 +54,12 @@ while read -u 3 -r report ; do
     done
     if [[ $SAFE -eq 1 ]]; then
         TOTAL=$((TOTAL + 1))
+#    else
+#        echo "Report: $report is not safe. Reason: $ERR"
     fi
 done 3< $DATA
 
- echo "Total safe reports: $TOTAL"
+echo "Total safe reports: $TOTAL"
+if [[ $TOTAL -eq 0 ]]; then
+    exit 1
+fi
