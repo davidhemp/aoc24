@@ -1,5 +1,13 @@
 #!/bin/bash 
 
+if [[ $1 == "" ]]; then
+    DATA="../../data/day-2"
+elif [[ $1 == "test" ]]; then
+    DATA="../../data/day-2-example"
+else
+    DATA=$1  
+fi
+
 TOTAL=0
 while read -u 3 -r report ; do 
     SAFE=1
@@ -47,6 +55,6 @@ while read -u 3 -r report ; do
     if [[ $SAFE -eq 1 ]]; then
         TOTAL=$((TOTAL + 1))
     fi
-done 3< ../../data/day-2
+done 3< $DATA
 
  echo "Total safe reports: $TOTAL"
