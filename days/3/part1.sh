@@ -8,7 +8,7 @@ else
     DATA=$1  
 fi
 
-egrep -o "mul\([0-9]{1,3}\,[0-9]{1,3}\)" $DATA > /tmp/filtered_mul
+grep -P -o "(mul\(\d{1,3},\d{1,3}\))" $DATA > /tmp/filtered_mul
 
 total=0
 for line in $(cat /tmp/filtered_mul); do
