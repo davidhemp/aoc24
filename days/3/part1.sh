@@ -3,7 +3,7 @@
 if [[ $1 == "" ]]; then
     DATA="../../data/day-3"
 elif [[ $1 == "test" ]]; then
-    DATA="../../data/day-3-example"
+    DATA="../../data/day-3-example-1"
 else
     DATA=$1  
 fi
